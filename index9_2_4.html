@@ -2,20 +2,27 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Exer Orig</title>
 </head>
 <body>
+
 	<script type="text/javascript">
 
-//Find last element of the following//
+//Find last element - Ex 1//
+// function lastItem(x) {
+//  y = x[x.length-1];
+// console.log(y) 
+// };
+// lastItem(['one', 'two', 'three', 'four','five', 'six','seven', 'eight', 'nine', 'ten', 'eleven']);
 
-// var items1 = ['one', 'two', 'three', 'four','five', 'six','seven', 'eight', true];
-// console.log(items1[items1.length-1])
+//Find last element - Ex 2//
+// function lastItem (x){
+// 	y = x.split (" ");
+// 	console.log(y[y.length-1]);
+// }
+// lastItem("A really long string of butt poops");
 
-var items2 = "A really long string of butt cheeks";
-var position = items2.split (" ");
-console.log(position[position.length-1])
-
+//Find last element - Ex3
 // var items3 = [[1,2,3], ['one', 'two'], [true, false, true] , ['apple', 'pear', 'banana', 'pineapple']];
 // var lastItem = items.length-1
 // var
@@ -25,16 +32,67 @@ console.log(position[position.length-1])
 // if()
 // 	}
 // }}
-
 // findLastItem();
-
 // console.log(items3[items3.length-1]);
 
 //Area of triangle 5, 6, 7
+		// function triArea (a, b, c) {
+  //           p = (a + b + c)/2;
+  //           q = (p * (p-a) * (p-b) * (p-c));
+  //           console.log (Math.sqrt(q));
+  //       };
+  //       triArea(5,6,7);
+
+//Reverse a Number
+// function revNum(n){
+// 	o = n + "";
+// 	p = o.split("").reverse().join("");
+// 	console.log(p)
+// }
+// revNum(12345678);
+
+
+//alphabetize a string//
+// function alphaChar(s) {
+// 	t = s + "";
+// 	u = t.split("").sort().join("");
+// 	console.log(u);
+// };
+// alphaChar("Andrew");
+
+//Uppercase every word
+// function upperCase (s){
+// s = s.toLowerCase().split('');
+// console.log(s);
+// for (var i = 0; i < s.length; i++){
+// 	s = s[i].split('');
+// 	s = s[i][0].toUpperCase();
+// 	s = s.join('');
+// }
+// s = s.join('');
+// console.log(s)
+// };
+
+// upperCase("javascript is my most favorite language");
+
+//Find the longest word
+function longestWord (x){
+y = x.split(" ");
+console.log(y);
+console.log(y[y.length-1]);
+z = (y[y.length-1]); 
+console.log(z);
+console.log(z.length);
+// for (var i = 0, i < y.length-1, i++) {
+// 	if (i[i.length] >= i+1[i.length])
+// 		console.log (i)
+// 	else ("cant figure it out")
+// }
+};
+longestWord("A 24 week bootcamp is making me nerd out");
 
 
 
- 
 
 	</script>
 </body>
