@@ -7,23 +7,170 @@
 </head>
 
 <body>
+    <p></p>
+    <p id="demo"></p>
     <script type="text/javascript">
+    // function fizzBuzz(count){
+    //     for(i = 1; i < count + 1; i++){
+    //         if(i % 3 == 0 && i % 5 == 0){
+    //             console.log(i + " = bytch this is fizz buzz")
+    //         }
+    //         if(i % 3 == 0){
+    //             console.log(i + " = fizz only")
+    //         }
+    //         else if(i % 5 == 0){
+    //             console.log(i + " = buzz off bytch")
+    //         }
+    //         else
+    //             console.log(i + " = loser")
+    //     }
+    // };
+    // fizzBuzz(160); 
+
+
+        // function fizzBuzz(count){
+        //     for(i = 1; i < count + 1; i++){
+        //         if (i % 3 == 0 && i % 5 == 0){
+        //             console.log("fizz buzz bitch")
+        //         }
+        //         else if (i % 3 == 0){
+        //             console.log("fizz")
+        //         }
+        //         else if (i % 5 == 0){
+        //             console.log("buzz off")
+        //         }
+        //         else
+        //             console.log(i + " = sadness")
+        //     }
+        // };
+        // fizzBuzz(140);
+
+
+
+
+    // function fizzBuzz(count){
+    //     for(i = 1; i < count + 1; i++){
+    //         if(i % 3 == 0 && i % 5 == 0){
+    //             console.log(i + " = bitchin fizz buzz")
+    //         }
+    //         else if(i % 3 == 0){
+    //             console.log("fizz")
+    //         }
+    //         else if(i % 5 ==0){
+    //             console.log("buzz")
+    //         }
+    //         else
+    //             console.log(i)
+    //     }
+    // };
+    // fizzBuzz(160);
+
+
+
+
+
+    // function fizzBuzz(count) {
+    //     for (i = 1; i < count + 1; i++) {
+    //         if (i % 3 == 0 && i % 5 == 0) {
+    //             console.log("fizz buzz")
+    //         } else if (i % 3 == 0) {
+    //             console.log("fizz")
+    //         } else if (i % 5 == 0) {
+    //             console.log("buzz")
+    //         }else
+    //         console.log(i)
+    // }
+    // };
+    // fizzBuzz(120);
+
     function fizzBuzz(count){
-        for(var i = 1; i < count + 1; i++){
-            if(i % 3 == 0 && i % 5 == 0){
-                console.log(i + " = fizz buzz")
+        for(i = 1; i < count + 1; i++){
+            if(i % 3 === 0 && i % 5 === 0){
+                console.log(i + " = fizz buzz");
+                document.write('<p>'+ i +' = fizz buzz</p>');        
             }
-            else if (i % 3 == 0){
-                console.log(i + " = fizz")
+            else if(i % 3 === 0){
+                console.log(i + " = fizz");
+                document.write('<p>'+ i + ' = fizz</p>');
+            } 
+            else if(i % 5 === 0){
+                console.log(i + " = buzz");
+                document.write('<p>'+ i + ' = buzz</p>');
             }
-            else if (i % 5 == 0){
-                console.log(i + " = buzz")
-            }
-            else
-                console.log(i)
-        }
+            else 
+                console.log(i + " = non-winner");
+                document.write('<p>'+ i + ' = non-winner</p>');
+    }
     };
-    fizzBuzz(100);
+    fizzBuzz(130);
+
+
+
+    // function fizzBuzz(count) {
+    // for(i = 1; i < count + 1; i++){
+    //     if(i % 3 == 0 && i % 5 == 0){
+    //         console.log("fizz buzz")
+    //     }
+    //     else if(i % 3 == 0){
+    //         console.log("fizz")
+    //     }
+    //     else if(i % 5 == 0){
+    //         console.log("buzz")
+    //     }
+    //     else
+    //         console.log(i)
+    // }
+    // };
+    // fizzBuzz(100);
+
+    // function fizzBuzz(count){
+    //     for(i=1; i<count+1; i++){
+    //         if(i % 3 == 0 && i % 5 == 0){
+    //             console.log(i + " = fizz buzz")
+    //         }
+    //         else if(i % 3 == 0){
+    //             console.log(i + " = fizz")
+    //         }
+    //         else if(i % 5 == 0){
+    //             console.log(i + " = buzz")
+    //         }
+    //         else
+    //             console.log(i + " = you a loser")
+    //     }
+    // };
+    // fizzBuzz(100);
+
+    // function fizzBuzz(count){
+    //     for(var i = 1; i < count + 1; i++){
+    //         if(i % 3 == 0 && i % 5 == 0){
+    //             console.log(i + " = fizz buzz")
+    //         }
+    //         else if (i % 3 == 0){
+    //             console.log(i + " = fizz")
+    //         }
+    //         else if (i % 5 == 0){
+    //             console.log(i + " = buzz")
+    //         }
+    //         else
+    //             console.log(i)
+    //     }
+    // };
+    // fizzBuzz(100);
+    // function fizzBuzz(count) {
+    //     for (var i = 1; i < count + 1; i++) {
+    //         if (i % 3 == 0 && i % 5 == 0) {
+    //             console.log(i + " = fizz buzz")
+    //         }
+    //         else if (i % 3 == 0) {
+    //             console.log(i + " = fizz")
+    //         }
+    //         else if (i % 5 == 0) {
+    //             console.log(i + " = buzz")
+    //         } else
+    //             console.log(i + " = a loser")
+    //     }
+    // };
+    // fizzBuzz(100);
     </script>
 
 </html>
