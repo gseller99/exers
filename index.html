@@ -13,8 +13,8 @@
     // var totalRoll = diceRoll + diceRoll2;
     // alert("Your roll equals " + diceRoll + " and " + diceRoll2 + " for a total of " + totalRoll);
 
-    var firstName = prompt("What is your first name?");
-    alert('Hello ' + firstName + ' please continue if you feel like a smarty pants!');
+    var firstName = prompt("What is your name?");
+    alert('Hello ' + firstName + '! Please continue if you feel like a smarty pants!');
     var gender = prompt("Are you male or female?");
     var gendermod = gender.toUpperCase();
     var answer1 = prompt("What is the square root of 4. (hint: must be a number with no decimal places)");
@@ -27,29 +27,29 @@
     document.write('<h1> Here is ' + firstName + ' \'s score!</h1>')
 
     if (parseInt(answer1) === 2) {
-        document.write('<p> ' + answer1 + ' = the correct answer for the square root of 4. </p>');
+        document.write('<p>  Question 1: ' + answer1 + '  =  the correct answer for the square root of 4. </p>');
         correctAnswers += 1;
 
     } else if (parseInt(answer1) !== 2) {
-        document.write('<p> ' + answer1 + ' = not correct\; the correct answer for the square root of 4 is 2. ');
+        document.write('<p>  Question 1: ' + answer1 + '  =  not correct\; the correct answer for the square root of 4 is 2. ');
 
     };
 
     if (answer2mod === 'WHITE') {
-        document.write('<p> ' + answer2mod + ' = the correct answer for the white horse of Washington.');
+        document.write('<p>  Question 2: ' + answer2mod + ' = the correct answer for the white horse of Washington.');
         correctAnswers += 1;
 
     } else if (answer2mod !== 'WHITE') {
-        document.write('<p> ' + answer2mod + ' = not correct\; the correct answer is white for Washington\'s white horse. ');
+        document.write('<p>  Question 2: ' + answer2mod + '  =  not correct\; the correct answer is white for Washington\'s white horse. ');
 
     };
 
     if (parseInt(answer3) < 5){
-        document.write('<p> ' + answer3 + ' toots today is less than 5 for a non-tooter like ' + firstName + ' so this is a correct answer. This has got to be a record! You are eating a healthy diet and avoiding too many beans!');
+        document.write('<p>  Question 3: ' + answer3 + ' toots today is less than 5 for a non-tooter like ' + firstName + ' so this is a correct answer. This has got to be a record! You are eating a healthy diet and avoiding too many beans!');
         correctAnswers += 1;
         document.write('<p> Congratulations ' + firstName + ', you have answered ' + correctAnswers + ' question\(s\) of 3 total questions correctly. </p>');
     } else if (parseInt(answer3) >= 5) {
-        document.write('<p> ' + answer3 + ' = not correct\; the correct answer is less than 5 for the number of times ' + firstName + ' should have tooted today. You are eating way too many beans and bad foods! ');
+        document.write('<p>  Question 3: ' + answer3 + ' = not correct\; the correct answer is less than 5 for the number of times ' + firstName + ' should have tooted today. You are eating way too many beans and bad foods! ');
         document.write('<p> Congratulations ' + firstName + ', you have answered ' + correctAnswers + ' question\(s\) of 3 total questions correctly! </p>')
     };
     if (correctAnswers === 3) {
