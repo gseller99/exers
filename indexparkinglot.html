@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    //constructor for a car
+ function car(make, year, plate) {
+ 	this.make = make;
+ 	this.year = year;
+ 	this.plate = plate;
+ 	this.parked = false;
+ 	this.spaceParked = null;
+ 	this.timeParked = 1000;
+ };
+ var x = new car("Toyota", 2016, "fbs 4545");
+ console.dir(x);
+
+    //create 100 cars
+ function carMaker(count){
+ 	arr = [];
+ 	for(var i = 0; i < count; i++){
+ 		var firstCar = new car("Toyota", 2016, i + "-fbs 4545");
+ 		arr.push(firstCar);
+ 	}
+ 	console.dir(arr);
+ 	return arr;
+ }
+ var carDealer = carMaker(100);
+ console.dir(arr);
+
+
+
+    </script>
+</body>
+
+</html>

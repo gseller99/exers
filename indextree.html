@@ -20,7 +20,7 @@
     var answer1 = prompt("What is the square root of 4");
     var answer2 = prompt("What is the color of Washington's white horse");
     var answer2mod = answer2.toUpperCase();
-    var answer3 = prompt("How many times did " + firstName + " queef today?");
+    var answer3 = prompt("How many times did " + firstName + " toot today?");
     var correctAnswers = 0;
 
     document.write('<h1> Here is ' + firstName + ' \'s score!</h1>')
@@ -44,16 +44,16 @@
     };
 
     if (parseInt(answer3) === 0) {
-        document.write('<p> ' + answer3 + ' = the correct answer for the queefs by ' + firstName + '  today which has got to be a record!');
+        document.write('<p> ' + answer3 + ' = the correct answer for the toots by ' + firstName + '  today which has got to be a record!');
         correctAnswers += 1;
         document.write('<p> Congratulations ' + firstName + ' you have answered ' + correctAnswers + ' question\(s\) correctly. </p>');
     } else if (parseInt(answer3) !== 0) {
-        document.write('<p> ' + answer3 + ' = not correct\; the correct answer is 0 for the number of ' + firstName + ' queefs today which has got to be a record! ');
+        document.write('<p> ' + answer3 + ' = not correct\; the correct answer is 0 for the number of ' + firstName + ' toots today which has got to be a record! ');
         document.write('<p> Congratulations ' + firstName + ' you have answered ' + correctAnswers + ' question\(s\) correctly! </p>')
     };
 
     if (correctAnswers === 3) {
-        document.write('<p> You da Bomb\! ' + firstName + ' the non-queefer! </p>');
+        document.write('<p> You da Bomb\! ' + firstName + ' the non-tooter! </p>');
     };
     if (gendermod === 'FEMALE' && correctAnswers === 3) {
         document.write('<h1> You are the Queen! You are one smart cookie '+ firstName + ' ! </h1>');
