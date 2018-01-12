@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//1. create select element
+	//2. give that element id = names
+	//3. create option element
+	//4. give element a value of name
+	//5. give that element a textNode
+	//6. append that as a child to names
+
+	var namelist = document.createElement('select');
+	namelist.setAttribute('id', 'name')
+
+	var nameoption = document.createElement('option');
+	nameoption.setAttribute('value', 'Miguel Gonzalez');
+	var optionText = document.createTextNode('Miguel Gonzalez');
+	nameoption.appendChild(optionText);
+
+	namelist.appendChild(nameoption);
+
+	document.body.appendChild(namelist);
+
+
+	// var names = document.createElement('select');
+	// names.setAttribute('id', 'names');
+
+	// var option1 = document.createElement('option');
+	// option1.setAttribute('value', 'Miguel Gonzalez');
+	// var option1text = document.createTextNode ('Miguel Gonzalez');
+	// option1.appendChild(option1text);
+
+	
+	// names.appendChild(option1);
+	
+
+	// document.body.appendChild(names);
+
+
+	// colors = ['mauve', 'chartuese', 'greenish'];
+	// for(i = 1; i < 100; i++) {
+	// 	var colorIndex = i % colors.length;
+	// 	var color = colors[colorIndex];
+	// 	document.write('<p>'+ i +' = ' + color +' </p>');
+	// };
+
+
+	// 	colors = ['red', 'green', 'blue', 'orange'];
+	// 	for (i = 0; i < 1000; i++) {
+	// 	var colorIndex = i % colors.length;
+	// 	var color = colors[colorIndex];
+	// 	console.log(i + ' = ' + color);
+	// };
+
+		
+	</script>
+</body>
+</html>

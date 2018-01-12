@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<style type="text/css">
+#container-one {
+    border: 3px solid blue;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    padding-left: : 5px;
+}
+
+#container-two {
+    border: 3px solid red;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+#container-three {
+    border: 3px solid green;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+
+#child-container {
+    background-color: yellow;
+    width: 25px;
+    height: 25px;
+}
+
+#outer-box {
+	margin: 10px;
+}
+
+</style>
+
+<body>
+    <div id="outer-box">
+        <div id="container-one">
+            <div id="child-container">
+            </div>
+        </div>
+        <div id="container-two">
+        </div>
+        <div id="container-three">
+        </div>
+    </div>
+    <br>
+    <a href="#" id="move" class="card-link fa fa-arrow-down">Move yellow box</a>
+    <!-- <button id = "move">Move</button -->
+    <script type="text/javascript">
+    var button = document.getElementById('move');
+
+    button.addEventListener('click', function() {
+        var childContainer = document.getElementById('child-container');
+        var parent = childContainer.parentNode;
+
+        parent.removeChild(childContainer);
+
+        if (parent.id === 'container-one') {
+            var containerTwo = document.getElementById('container-two');
+            containerTwo.appendChild(childContainer);
+        } else if (parent.id === 'container-two') {
+            var containerThree = document.getElementById('container-three');
+            containerThree.appendChild(childContainer);
+        } else
+            var containerOne = document.getElementById('container-one');
+        containerOne.appendChild(childContainer);
+    });
+    </script>
+</body>
+
+</html>

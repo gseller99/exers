@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+	</title>
+	<style type="text/css">
+		body {
+			padding: 0px;
+		}
+
+		#trello-board {
+			background-color: cadetblue;
+			height: 100vh;
+		}
+		.card {
+			background-color: red;
+			width: 250px;
+			height: 250px;
+			margin-top: 15px;
+		}
+	</style>
+</head>
+<body>
+	<button id="moveButton">Add a red square</button>
+	<div id="trello-board"></div>
+	
+	<script type="text/javascript">
+			
+			function createAwesomeDiv(parentDivId) {
+				// 1. identify the div that is the parent
+				var parent = document.getElementById(parentDivId);
+			// 2. create new div
+				var newDiv = document.createElement('div');
+				newDiv.setAttribute('class', 'card');
+
+
+			//  - set attributes
+			// 3. Add new div to parent div
+			  parent.appendChild(newDiv);
+
+		};
+		
+		var mybutton = document.getElementById('moveButton')
+		 mybutton.addEventListener('click', function(){
+		 	createAwesomeDiv('trello-board');
+		 });
+
+
+	</script>
+	
+</body>
+</html>
