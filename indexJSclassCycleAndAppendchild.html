@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//1. create select element
+	//2. give that element id = names
+	//3. create option element
+	//4. give element a value of name
+	//5. give that element a textNode
+	//6. append that as a child to names
+
+var colorscheme = ['bluish', 'greenish', 'orangish'];
+
+function Colorcycler(count) {
+for (i = 1; i < count + 1; i++) {
+var colorIndex = i % colorscheme.length;
+var color = colorscheme[colorIndex];
+console.log(i + ' = ' + color);
+}
+};
+
+Colorcycler(15);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var colorGroup = ["reddish", "beige", "chartuese", "velvet", "amyish"];
+// colorGroup.splice(2,0, "garyish", "booish");
+
+
+// function Colorcyle(rubbish, rubbish2, rubbish3) {
+// 	for (var i = 0; i < rubbish2; i++){
+// 		var colorIndex = i % colorGroup.length;
+// 		var color = colorGroup[colorIndex];
+// 		console.log(i + ' = ' + color);
+// 	}
+// };
+// Colorcyle(90, 500, 700);
+
+// var colors = ['red', 'blue', 'striped'];
+// for(i = 0; i < 90; i++) {
+// 	var colorIndex = i % colors.length;
+// 	var color = colors[colorIndex];
+// 	console.log(color);
+// };
+
+
+	// var namelist = document.createElement('select');
+	// namelist.setAttribute('id', 'name');
+
+
+
+	// //why can't provide text name to drop down
+	// var namelistname = document.createTextNode('dropdown list');
+	// namelist.appendChild(namelistname);
+	// // this caused the code to not work
+	// // namelist.value('dropdown list');
+
+
+
+	// var nameoption = document.createElement('option');
+	// nameoption.setAttribute('value', 'Miguel Gonzalez');
+	// var optionText = document.createTextNode('Miguel Gonzalez');
+	// nameoption.appendChild(optionText);
+
+	// namelist.appendChild(nameoption);
+
+	// var nameoption = document.createElement('option');
+	// nameoption.setAttribute('value', 'Amy Shmamy');
+	// var optionText = document.createTextNode('Amy Shmamy');
+	// nameoption.appendChild(optionText);
+
+	// namelist.appendChild(nameoption);
+
+	// var nameoption = document.createElement('option');
+	// nameoption.setAttribute('value', 'Gary Sellergren');
+	// var optionText = document.createTextNode('Gary Sellergren');
+	// nameoption.appendChild(optionText);
+
+	// namelist.appendChild(nameoption);
+
+	// document.body.appendChild(namelist);
+
+
+	// var names = document.createElement('select');
+	// names.setAttribute('id', 'names');
+
+	// var option1 = document.createElement('option');
+	// option1.setAttribute('value', 'Miguel Gonzalez');
+	// var option1text = document.createTextNode ('Miguel Gonzalez');
+	// option1.appendChild(option1text);
+
+	
+	// names.appendChild(option1);
+	
+
+	// document.body.appendChild(names);
+
+
+	// colors = ['mauve', 'chartuese', 'greenish'];
+	// for(i = 1; i < 100; i++) {
+	// 	var colorIndex = i % colors.length;
+	// 	var color = colors[colorIndex];
+	// 	document.write('<p>'+ i +' = ' + color +' </p>');
+	// };
+
+
+	// 	colors = ['red', 'green', 'blue', 'orange'];
+	// 	for (i = 0; i < 1000; i++) {
+	// 	var colorIndex = i % colors.length;
+	// 	var color = colors[colorIndex];
+	// 	console.log(i + ' = ' + color);
+	// };
+
+		
+	</script>
+</body>
+</html>

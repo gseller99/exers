@@ -10,26 +10,108 @@
     <p></p>
     <p id="demo"></p>
     <script type="text/javascript">
-function Foobar(count) {
-    for(i = 1; i < count + 1; i++) {
-        if( i % 3 === 0 && i % 5 === 0) {
-            document.write('<p> ' + i +' = foobar </p>')
-            // console.log("foobar")  
+
+function greyGoose(countingMech) {
+    for (var i = 1; i < countingMech + 1; i++){
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log(i + " = greygoose");
         }
-        else if( i % 3 === 0) {
-            document.write('<p> ' + i +' = foo </p>')
-            // console.log("foo")
+        else if (i % 3 === 0) {
+            console.log(i + " = grey");
         }
-        else if(i % 5 === 0) {
-            document.write('<p> ' + i +' = bar </p>')
-            // console.log("bar") 
+        else if (i % 5 === 0) {
+            console.log(i + " = goose");
         }
         else
-            document.write('<p> ' + i +' = LOSER </p>')
-            // console.log(i)
+            console.log(i);
     }
-};
-Foobar(500);
+}
+
+greyGoose(300);
+
+
+
+
+
+
+
+
+
+// //football
+
+// function football(counter) {
+//     for (var i = 1; i < counter + 1; i++) {
+//         if (i % 3 === 0 && i % 5 === 0) {
+//             document.write ('<br> '+ i +' = football');
+//         }
+//         else if (i % 3 === 0) {
+//             document.write ('<br> '+ i +' = foot');
+//         }
+//         else if (i % 5 === 0) {
+//             document.write ('<br> '+ i +' = ball');
+//         }
+//         else
+//             document.write ('<br> '+ i +'');
+//     }
+// }
+
+// football(275);
+
+
+// function BamBoozled(count) {
+//     for (var i = 1; i < count + 1; i++) {
+//         if (i % 3 === 0 && i % 5 === 0) {
+//             document.write('<br> ' + i + ' = bam boozled ')
+//         }
+//         else if (i % 3 === 0) {
+//             document.write('<br> ' + i +' = bam ')
+//         }
+//         else if (i % 5 === 0) {
+//             document.write('<br> ' + i +' = boozled ')
+//         }
+//         else
+//             document.write('<br> ' + i + ' ')
+//     }
+// };
+// BamBoozled(201);
+
+    // function Cheeseball(count) {
+    //     for (i = 1; i < count + 1; i++) {
+    //         if (i % 3 === 0 && i % 5 === 0) {
+    //             console.log(i + " = cheeseball")
+    //         } 
+    //         else if (i % 3 === 0) {
+    //             console.log(i + " = cheese")
+    //         } 
+    //         else if (i % 5 === 0) {
+    //             console.log(i + " = ball")
+    //         } 
+    //         else
+    //             console.log(i)
+    //     }
+    // };
+    // Cheeseball(200);
+
+    // function Foobar(count) {
+    //     for(i = 1; i < count + 1; i++) {
+    //         if( i % 3 === 0 && i % 5 === 0) {
+    //             document.write('<p> ' + i +' = foobar </p>')
+    //             // console.log("foobar")  
+    //         }
+    //         else if( i % 3 === 0) {
+    //             document.write('<p> ' + i +' = foo </p>')
+    //             // console.log("foo")
+    //         }
+    //         else if(i % 5 === 0) {
+    //             document.write('<p> ' + i +' = bar </p>')
+    //             // console.log("bar") 
+    //         }
+    //         else
+    //             document.write('<p> ' + i +' = LOSER </p>')
+    //             // console.log(i)
+    //     }
+    // };
+    // Foobar(500);
 
 
 
@@ -56,22 +138,22 @@ Foobar(500);
     // fizzBuzz(300);        
 
 
-        // function fizzBuzz(count) {
-        //     for (var i = 1; i < count + 1; i++) {
-        //         if (i % 3 === 0 && i % 5 === 0) {
-        //             document.write("%c " + i + "  = fizzy buzz", 'color: blue;');
-        //         }
-        //         else if (i % 3 === 0) {
-        //             document.write('<p> '+ i + '  = fizzure</p>')
-        //         }
-        //         else if (i % 5 === 0) {
-        //             document.write('<p> '+ i + '  = buzz off</p>')
-        //         }
-        //         else
-        //             document.write('<p> '+ i + '  = sucks </p>')
-        //     } 
-        // };
-        // fizzBuzz(160);      
+    // function fizzBuzz(count) {
+    //     for (var i = 1; i < count + 1; i++) {
+    //         if (i % 3 === 0 && i % 5 === 0) {
+    //             document.write("%c " + i + "  = fizzy buzz", 'color: blue;');
+    //         }
+    //         else if (i % 3 === 0) {
+    //             document.write('<p> '+ i + '  = fizzure</p>')
+    //         }
+    //         else if (i % 5 === 0) {
+    //             document.write('<p> '+ i + '  = buzz off</p>')
+    //         }
+    //         else
+    //             document.write('<p> '+ i + '  = sucks </p>')
+    //     } 
+    // };
+    // fizzBuzz(160);      
 
     // function fizzBuzz(count){
     //     for(i = 1; i < count + 1; i++){
@@ -91,22 +173,22 @@ Foobar(500);
     // fizzBuzz(160); 
 
 
-        // function fizzBuzz(count){
-        //     for(i = 1; i < count + 1; i++){
-        //         if (i % 3 == 0 && i % 5 == 0){
-        //             console.log("fizz buzz bitch")
-        //         }
-        //         else if (i % 3 == 0){
-        //             console.log("fizz")
-        //         }
-        //         else if (i % 5 == 0){
-        //             console.log("buzz off")
-        //         }
-        //         else
-        //             console.log(i + " = sadness")
-        //     }
-        // };
-        // fizzBuzz(140);
+    // function fizzBuzz(count){
+    //     for(i = 1; i < count + 1; i++){
+    //         if (i % 3 == 0 && i % 5 == 0){
+    //             console.log("fizz buzz bitch")
+    //         }
+    //         else if (i % 3 == 0){
+    //             console.log("fizz")
+    //         }
+    //         else if (i % 5 == 0){
+    //             console.log("buzz off")
+    //         }
+    //         else
+    //             console.log(i + " = sadness")
+    //     }
+    // };
+    // fizzBuzz(140);
 
 
 

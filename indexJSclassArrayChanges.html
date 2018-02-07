@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//create array red green blue yellow orange
+	
+//create 5 color array named colors gray/red/green/blue/yellow
+colors = ['gray', 'red', 'green', 'blue', 'yellow'];
+
+//take out last item
+colors.pop();
+//put in two items at end purple and black
+colors.push('purple', 'black');
+console.dir(colors);
+
+
+//hold in a variable named redGreen and take out red/green from colors
+var red = colors.indexOf('red');
+var green = colors.indexOf('green');
+console.log('red' + ' index = ' + red);
+console.log('green' + ' index = ' + green);
+
+// var redGreen = colors of red and green; their spot with orange and pink at end
+var redGreen = colors.splice(red, 2, 'orange', 'pink'); 
+// print to console should have gray/orange/pink/blue/purple/black
+console.dir(colors);
+//cycle through 205 times the resulting colors and print to page 
+for(i=0; i<205; i++) {
+	colorIndex = i % colors.length;
+	document.write('<br> ' + i + ' = ' + colors[colorIndex]);
+};
+
+
+//show resulting array at end for redGreen
+
+console.dir(redGreen);
+
+
+
+	// var colors = ['red', 'green', 'blue', 'yellow', 'orange'];
+	// colors.pop();
+	// colors.push('purple', 'black');
+	// var redGreen = colors.splice(0,2);
+	// for (i = 0; i < 100; i++) {
+	// 	var colorIndex = i % colors.length;
+	// 	var color = colors[colorIndex];
+	// 	console.log(i + ' = ' + color)
+	// };
+	// console.dir(colors);
+	// console.dir(redGreen);
+
+	//for loop for 100 times
+	// create an index that will cycle through the array
+	//find index spot in array cycling through 1 by 1
+	//create variable to hold that spot
+	//print out color according to index spot
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// var colors = ['red', 'green', 'blue', 'yellow'];
+	// for(var i = 0; i < 100; i++) {
+	// 	var colorIndex = i % colors.length;
+	// 	var color = colors[colorIndex];
+	// 	console.log(i + ' = ' + color);
+	// };
+
+
+	
+
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>

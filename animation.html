@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="">
+		
+	#box1 {
+		height: 100px;
+		width: 100px;
+		position: absolute;
+		left: 20px;
+		top: 90px;
+		background-color: orange;
+		text-align: center;
+		}
+	
+	#box2 {
+		height: 50px;
+		width: 50px;
+		position: absolute;
+		left: 20px;
+		top: 220px;
+		background-color: red;
+		text-align: center;
+		}
+
+	.buttonsForBox {
+		margin-top: 5px;
+	}
+
+		/*#box {
+			width: 100px;
+			height: 100px;
+			background-color: purple;
+			position: absolute;
+			top: 40px;
+			left: 20px;
+		}*/
+
+				
+		/*#box {
+			width: 100px;
+			height: 100px;
+			background-color: orange;
+			position: absolute;
+			top: 40px;
+			left: 20px;
+		}*/
+	</style>
+</head>
+<body>
+<input type="button" value="start both" onclick="startBoth()">
+<input type="button" value="reset" onclick="reset()">
+<input type="button" value="stop" onclick="stop()">
+
+<div class="buttonsForBox">
+<input type="button" value="start1" onclick="start1()">
+<input type="button" value="start2" onclick="start2()">
+</div>
+
+<div id="box1">#1</div>
+<div id="box2">#2</div>	
+
+<script type="text/javascript"> -->
+
+let box1 = document.getElementById('box1');
+let box2 = document.getElementById('box2');
+
+var intervalId1
+var intervalId2
+
+reset();
+
+function reset() {
+	box1.style.left = "20px";
+	box1.style.top = "90px";
+	box2.style.left = "20px";
+	box2.style.top = "220px";
+}
+
+function moveBox1() {
+	box1.style.left = `${parseInt(box1.style.left.replace("px", "")) + 10}px`;
+}
+
+function moveBox2() {
+	box2.style.left = `${parseInt(box1.style.left.replace("px", "")) + 10}px`;
+}
+
+
+function moveBoth() {
+	box1.style.left = `${parseInt(box1.style.left.replace("px", "")) + 10}px`;
+	box2.style.left = `${parseInt(box1.style.left.replace("px", "")) + 10}px`;
+}
+
+
+function start1() {
+	intervalId1 = setInterval(moveBox1, 200);
+}
+
+function start2() {
+	intervalId1 = setInterval(moveBox2, 100);
+}
+
+function startBoth () {
+	intervalId1 = setInterval(moveBoth, 100);
+}
+
+
+function stop() {
+	clearInterval(intervalId1, intervalId2);
+
+}
+
+
+
+/* // <!-- <input type="button" value="reset" onclick="reset()">
+	// <input type="button" value="stop" onclick="stop()">
+	// <input type="button" value="start" onclick="start()">
+
+	// <div id="box"></div>
+	// 	<div id="innerbox"></div> -->
+	
+	
+	// <!-- // let box = document.getElementById('box');
+
+	// var intervalId
+
+	// reset();
+
+	// function reset() {
+	// 	box.style.top = "40px";
+	// 	box.style.left = "20px";
+	// }
+
+	// function start() {
+	// 	intervalId = setInterval(moveit, 50);
+	// }
+
+	// function stop() {
+	// 	clearInterval(intervalId);
+	// }
+
+	// function moveit() {
+	// 	box.style.left = `${parseInt(box.style.left.replace("px", "")) + 10}px`;
+	// } -->
+
+
+	
+
+
+	// <!-- //create box with a width, height, background-color, position, top, left
+	
+	// //create buttons for reset, stop, start functions to be called -->
+	
+	// <!-- //create div with id = box -->
+
+	// <!-- grab box
+
+	// var for intervalId
+
+	// run reset() on load
+
+	// create functions for reset, stop, start, moveit -->
+
+
+
+
+
+
+
+	// <!-- <input type="button" value="reset" onclick="reset()" />
+	// <input type="button" value="stop" onclick="stop()" />
+	// <input type="button" value="start" onclick="start()" />
+	// <div id="box"></div>
+	
+	
+		
+
+
+		<!-- // let box = document.getElementById('box');
+		// var intervalId;
+		// console.log(box);
+
+		// reset();
+
+		// function reset() {
+		// 	box.style.top = "40px";
+		// 	box.style.left = "20px";
+		// }
+
+		// function stop() {
+		// 	clearInterval(intervalId);
+		// }
+
+		// function moveit() { 
+		// 	box.style.left = `${parseInt(box.style.left.replace("px", "")) + 10}px`;
+		// }
+
+		// function start() {
+		// 	intervalId = setInterval(moveit, 50);
+		// }
+
+
+		// let box = document.querySelector(".box");
+		// var intervalId;
+
+		// reset();
+
+		// function reset() { -->
+		<!-- // 	box.style.top = "40px";
+		// 	box.style.left = "0px";
+		// }
+
+		// function moveit() {
+		// 	box.style.left = `${parseInt(box.style.left.replace("px","")) + 10}px`;
+		// }
+
+		// function stop() {
+		// 	clearInterval(intervalId);
+		// }
+
+		// function start() {
+		// 	intervalId = setInterval(moveit, 50);
+		// } --> */
+	
+		
+
+	</script>
+</body>
+</html>

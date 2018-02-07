@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS dropdown Exercise</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var namelist = document.createElement('select');
+	namelist.setAttribute('id', 'name');
+
+
+
+	//why can't provide text name to drop down
+	var namelistname = document.createTextNode('dropdown list');
+	namelist.appendChild(namelistname);
+	// this caused the code to not work
+	// namelist.value('dropdown list');
+
+
+
+	var nameoption = document.createElement('option');
+	nameoption.setAttribute('value', 'Miguel Gonzalez');
+	var optionText = document.createTextNode('Miguel Gonzalez');
+	nameoption.appendChild(optionText);
+
+	namelist.appendChild(nameoption);
+
+	var nameoption = document.createElement('option');
+	nameoption.setAttribute('value', 'Amy Shmamy');
+	var optionText = document.createTextNode('Amy Shmamy');
+	nameoption.appendChild(optionText);
+
+	namelist.appendChild(nameoption);
+
+	var nameoption = document.createElement('option');
+	nameoption.setAttribute('value', 'Gary Sellergren');
+	var optionText = document.createTextNode('Gary Sellergren');
+	nameoption.appendChild(optionText);
+
+	namelist.appendChild(nameoption);
+
+	document.body.appendChild(namelist);
+
+
+	// var names = document.createElement('select');
+	// names.setAttribute('id', 'names');
+
+	// var option1 = document.createElement('option');
+	// option1.setAttribute('value', 'Miguel Gonzalez');
+	// var option1text = document.createTextNode ('Miguel Gonzalez');
+	// option1.appendChild(option1text);
+
+	
+	// names.appendChild(option1);
+	
+
+	// document.body.appendChild(names);	
+
+
+
+
+	</script>
+	
+</body>
+</html>

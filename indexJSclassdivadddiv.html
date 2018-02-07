@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+	</title>
+	<style type="text/css">
+		body {
+			padding: 0px;
+		}
+
+		#trello-board {
+			background-color: cadetblue;
+			height: 100vh;
+		}
+		.card {
+			background-color: red;
+			width: 250px;
+			height: 250px;
+			margin-top: 15px;
+		}
+	</style>
+</head>
+<body>
+	<button id="moveButton">Add a red square</button>
+	<div id="trello-board"></div>
+	
+	<script type="text/javascript">
+
+var mybutt = document.getElementById('moveButton');
+var ParentId = document.getElementById('trello-board');
+
+mybutt.addEventListener('click', function() {
+createReddishBoxish(ParentId);
+});
+
+function createReddishBoxish(rubbish99) {
+	var parentDivId = rubbish99;
+	var redBox = document.createElement('div');
+	redBox.setAttribute('class', 'card');
+	parentDivId.appendChild(redBox);
+};
+			
+// var mybutton = document.getElementById('moveButton');
+
+// mybutton.addEventListener('click', function() {
+// createRedBox('trello-board')
+// });
+
+// function createRedBox(rubbish) {
+// var parent = document.getElementById(rubbish);
+// var createRedBox = document.createElement('div');
+// createRedBox.setAttribute('class', 'card');
+
+// parent.appendChild(createRedBox);
+
+// };
+
+
+
+		// 	var mybutton = document.getElementById('moveButton')
+		//  mybutton.addEventListener('click', function(){
+		//  	createAwesomeDiv('trello-board');
+		//  });
+			
+
+		// 	function createAwesomeDiv(parentDivId) {
+		// 		// 1. identify the div that is the parent
+		// 		var parent = document.getElementById(parentDivId);
+		// 	// 2. create new div
+		// 		var newDiv = document.createElement('div');
+		// 		newDiv.setAttribute('class', 'card');
+
+
+		// 	//  - set attributes
+		// 	// 3. Add new div to parent div
+		// 	  parent.appendChild(newDiv);
+
+		// };
+		
+		
+
+// 		 var addLane = document.getElementById('lane');
+// var addlanebutton = document.getElementById('addlane').addEventListener('click', addlanefunction);
+// function addlanefunction(){
+//     addLane.insertAdjacentHTML(
+
+
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Midterm JS</title>
+</head>
+
+<body>
+    <style type="text/css">
+    .box {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+    }
+    </style>
+    <div class="box"></div>
+    <script type="text/javascript">
+    // 1. Add a 200px x 200px red square div to the page. Animate it from left to right, 10px per iteration. Move it 1000px to the right.
+
+    var intervalId;
+
+    let box = document.querySelector('.box');
+
+    console.dir(box);
+
+    box.style.left = 20px;
+
+    // function reset() {
+    //     box.div.style.top = 20 px;
+    //     box.div.style.left = 20 px;
+    // }
+    // reset();
+    // console.dir(box);
+
+    function moveBox() {
+
+        console.dir(box);
+        let boxLeft = getComputedStyle(box).left.replace('px', '');
+
+        if (boxLeft >= 1000) {
+            stopBox();
+        }
+
+        console.log(boxLeft + ' = left');
+
+        boxLeft = `${parseInt(boxLeft.replace("px", "")) + 10}px`;
+        }
+
+    function startBox() {
+        intervalId = setInterval(moveBox, 50);
+    }
+
+    function stopBox() {
+        clearInterval(intervalId);
+    }
+
+    startBox();
+    </script>
+</body>
+
+</html>

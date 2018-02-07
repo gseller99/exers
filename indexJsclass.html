@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    
+    var carGroup = [];
+
+    function Car(id, make, model, year) {
+        this.id = id;
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    function carMaker(make, model, year) {
+        for (var i = 0; i < 10; i++) {
+            carGroup.push(new Car(i, make, model, year));
+        }
+    }
+
+    carMaker("Toyota", "Rav4", 2016);
+	console.dir(carGroup);
+    
+    // var array = ["apple", "peach", "lobster"];
+
+    // console.log (array);
+
+
+    // function arrayInfo (foodLookingFor) { 
+    // 	for (var i = 0; i < array.length; i++) {
+    // 		if (array[i] === foodLookingFor) {
+
+    // 		}
+    // 		else
+    // 		console.log(array[i]);
+
+    // 	}
+    // 	return foodLookingFor
+    // }
+
+    // var answer = arrayInfo('lobster');
+    // console.log ("I found the " + answer);
+    </script>
+</body>
+
+</html>

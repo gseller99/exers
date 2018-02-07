@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Drive around the Box</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+    <input type="button" value="reset" onclick="reset()" />
+    <input type="button" value="start" onclick="start()" />
+    <input type="button" value="stop" onclick="stop()" />
+    <div id="container">
+        <div class="car"></div>
+        <div class="street street1"></div>
+        <div class="street street2"></div>
+        <div class="street street3"></div>
+        <div class="street street4"></div>
+        <div class="intersection intersection1"></div>
+        <div class="intersection intersection2"></div>
+        <div class="intersection intersection3"></div>
+        <div class="intersection intersection4"></div>
+    </div>
+    <script type="text/javascript">
+    let car = document.querySelector(".car");
+    var intervalId;
+
+
+    // let intersection1 = document.querySelector(.intersection1);
+    // console.log('car current top ' + car.style.top);
+
+    // let intersection = getComputedStyle(intersection1).width.replace('px', '');
+
+    // let intersection2 = document.querySelector(.intersection2);
+    // let intersection3 = document.querySelector(intersection3);
+    // let intersection4 = document.querySelector(intersection4);
+
+    reset();
+
+    function reset() {
+        car.style.top = "70px";
+        car.style.left = "80px"
+    }
+
+    function moveCar() {
+        console.log("moveCar");
+        car.style.left = `${parseInt(car.style.left.replace("px"," ")) + 10}px`;
+        let carLeft = getComputedStyle(car).left.replace('px', '');
+        // STOP AT INTERSECTION
+        if (carLeft >= 450) {
+            stop2();
+            waitToMove();
+            console.log('left = ' + carLeft);
+
+        }
+    }
+    //WAIT BEFORE MOVING INTO INTERSECTION
+    function waitToMove() {
+        console.log("waiting to move");
+        setTimeout(enterIntersection, 1000)
+    }
+
+    // Enter Intersection
+    function enterIntersection() {
+        console.log("Entering Intersection");
+        intervalId = setInterval(function() {
+            car.style.left = `${parseInt(car.style.left.replace("px"," ")) + 5}px`;
+            let carLeft = getComputedStyle(car).left.replace('px', '');
+            var i2 = document.querySelector(".intersection2");
+
+            var left = parseInt(getComputedStyle(i2).left.replace("px", " "));
+            var width = parseInt(getComputedStyle(i2).width.replace("px", " "));
+
+            var turnHere = (width / 4) + left;
+            if (carLeft > (turnHere - 5) && carLeft < (turnHere + 5)) {
+                console.log("turning");
+                stop2();
+                setInterval(moveCarDown, 50);
+
+            }
+
+        }, 500);
+    }
+
+    // Move down
+    function moveCarDown() {
+        console.log("Moving Down");
+        intervalId = setInterval(function() {
+            
+car.style.top = `${parseInt(car.style.top.replace("px"," ")) + 10}px`;
+        
+        console.log('Top = ' + carTop);
+        // STOP AT INTERSECTION
+
+
+            
+        }, 500);
+    let carTop = getComputedStyle(car).top.replace('px', '');
+    if (carTop >= 450) {
+            stop2();
+            waitToMove2();
+    }
+}
+
+
+function waitToMove2() {
+    console.log ('wait to move 2')
+    stop2();
+}
+
+
+
+
+
+
+
+
+
+
+
+        // intervalId = setInterval(function() {
+        //     car.style.top = `${parseInt(car.style.top.replace("px"," ")) + 10}px`;
+        //     let carTop = getComputedStyle(car).top.replace('px', '');
+
+        //     // STOP AT INTERSECTION
+
+        //     if (carTop >= 450) {
+        //         clearInterval(intervalId);
+        //         console.log("Look both ways!");
+        //         stop2();
+               //THIS IS NOT WORKING!!!!!
+                // waitToMove();
+                // console.log('position = ' + carTop);
+
+            
+    //     }, 500);
+    // }
+
+
+    function start() {
+        intervalId = setInterval(moveCar, 50);
+    }
+
+    function stop() {
+        clearInterval(intervalId);
+    }
+
+    function stop2() {
+        clearInterval(intervalId);
+    }
+    </script>
+</body>
+
+</html>
