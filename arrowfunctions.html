@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+	function getAnswer(a,b,multiply,addition){
+        if ( a % 2 === 0) {
+            return multiply(a,b);
+        }
+        else
+            return addition(a,b);
+    }
+
+    function cb1(a,b) {
+        return a * b;
+    }
+
+    function cb2(a,b) {
+        return a + b;
+    }
+
+    var answer = getAnswer(6,10,cb1,cb2);
+    console.log(`The answer will equal ${answer}`);
+
+ // function getAnswer(a, b, cb1, cb2) {
+ //        if (a % 2 === 0) {
+ //            return cb1(a, b);
+ //        } else
+ //            return cb2(a, b);
+ //    }
+
+ //    function cb1(a, b) {
+ //        return a * b;
+ //    }
+
+ //    function cb2(a, b) {
+ //        return a + b;
+ //    }
+
+ //    var answer = getAnswer(4, 10, cb1, cb2);
+ //    console.log(answer);
+
+	</script>
+	
+</body>
+</html>

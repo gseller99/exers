@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+class Animal {
+	constructor(hooves, legNumber) {
+		this.hooves = hooves;
+		this.legNumber = legNumber;
+	}
+}
+
+class Seagull extends Animal {
+	constructor(numberWings){
+		super(false, 2);
+		this.numberWings = numberWings;
+	}
+}
+
+class Dragonfly extends Animal {
+	constructor(numberWings){
+		super(false, 6);
+		this.numberWings = numberWings;
+	}
+}
+
+var mySeagull = new Seagull(2);
+	console.log(mySeagull);
+
+var myDragonfly = new Dragonfly(4);
+	console.log(myDragonfly);	
+
+
+	</script>
+	
+</body>
+</html>

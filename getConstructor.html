@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+			
+class ShoppingCart {
+	constructor(items) {
+		this.items = items != "undefined" ? items : [];
+		}
+}
+
+class Item {
+	constructor(name,description,price){
+		this.name = name;
+		this.description = description;
+		this.price = price;
+	}
+}
+
+var items = [];
+
+var item1 = new Item("socks", "big boy", 5);
+var item2 = new Item("pants", "fat boy", 20);
+
+items.push(item1);
+items.push(item2);
+
+var shoppingCart = new ShoppingCart(items);
+console.log(shoppingCart.items);
+
+	</script>
+	
+</body>
+</html>
