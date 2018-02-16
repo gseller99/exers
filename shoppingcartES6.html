@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <style type="text/css">
+    * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        font-family: Arial;
+        font-size: 16px;
+    }
+
+    h1 {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+        margin-bottom: 40px;
+    }
+
+    .form {
+        margin: 40px auto;
+        padding: 20px 40px;
+        width: 600px;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .form-group {
+        margin: 10px 0px;
+        display: flex;
+    }
+
+    label {
+        width: 150px;
+        text-align: right;
+        padding-right: 10px;
+        padding-top: 10px;
+    }
+
+    input,
+    textarea {
+        border: 1px solid #ccc;
+        padding: 10px;
+        width: 300px;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+
+    button {
+        background-color: blue;
+        color: white;
+        padding: 10px 40px;
+        font-size: 16px;
+        border-radius: 4px;
+    }
+
+    #submitButton {
+        background-color: lightgreen;
+    }
+    </style>
+    <form id="my-form">
+        <div class="form">
+            <h1>Product Details</h1>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" placeholder="Name" id="firstName" name="firstname" />
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" rows="5" placeholder="Description" ></textarea>
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="text" placeholder="Price" id="price" />
+            </div>
+            <div class="form-group">
+                <label>Cart Item Price</label>
+                <input type="text" placeholder="Don't enter data; will calculate" id="cartItemPrice"  />
+            </div>
+            <div class="form-group">
+                <label></label>
+                <button id="btnAddItemToCart">Add To Cart</button>
+            </div>
+        </div>
+    </form>
+    
+    <script type="text/javascript">
+    
+    class ShoppingCart {
+			constructor(items){
+				this.items = items !== undefined ? items : [];
+			}
+
+			addCartItem(item) {
+				this.items.push(item);
+			}
+		}
+
+		class Item {
+			constructor(name, description, price){
+				this.name = name;
+				this.description = description;
+				this._price = price;
+			}
+
+			get price(){
+				if (this._price >= 1000 && this._price <= 1999){
+					return this._price * .8;
+				} else if (this._price >= 2000) {
+					return this._price * .7;
+				} else return this._price;
+			}
+		}
+
+		var shoppingCart = new ShoppingCart();
+
+		var button = document.querySelector("#btnAddItemToCart");
+
+		button.addEventListener("click", function() {
+			shoppingCart.addCartItem(new Item("socks 1", "these stinky socks", 2000));
+			console.log(shoppingCart.items);
+		});
+
+    </script>
+</body>
+
+</html>

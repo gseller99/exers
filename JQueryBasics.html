@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery Timer</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <button>Click Me</button>
+    <!-- <h1>This is going to change just watch</h1>
+    <ul id='destinations'>
+        <li>Rome</li>
+        <li>Paris</li>
+        <li class='promo'>Rio</li>
+
+       <div>Hello World</div>
+       <div>Hello World</div> -->
+    <!-- <li class="promo">Rome</li>
+        <ul>
+            <li class="promo">Paris</li>
+        </ul>
+        <li class="promo">Rio</li> -->
+    <!-- </ul>
+    <p class="promo">Hello Gary</p> -->
+   
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+        $("button").on("click", function() {
+            alert("hi");
+        });
+
+
+        // targets just li child with class of promo
+        // $("ul li.promo").text("Orlando");
+
+        // targets all li's grabs first and then grabs next
+        // $("li").first().next().text("Austin"); 
+
+        // var paragraph = $('<p>I am starting to like jQuery.</p>');
+        // $('#destinations').before(paragraph);
+
+        // var paragraph = $('<p>I am starting to like jQuery.</p>');
+        // $('div').prepend(paragraph);
+
+        // $("li").remove();
+
+        //targets direct children only of li with class promo
+        // $("#destinations > li.promo").text("Inventive rocks!");
+    });
+
+
+    // setTimeout(function() {
+    //     var divElement = document.querySelector("h1");
+    //     divElement.innerHTML = "This is change 1";
+    // }, 5000);
+
+    // setTimeout(function() {
+    //     $("h1").text("I am change 2");
+    // }, 10000);
+    </script>
+</body>
+
+</html>
